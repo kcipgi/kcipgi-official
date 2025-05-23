@@ -1,26 +1,160 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>佑康官網</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>佑康官方網站</title>
   <style>
+    /* Reset & base */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Noto Sans TC', sans-serif;
+    }
     body {
-      font-family: sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #007acc;
+      color: white;
+      padding: 1rem 2rem;
       text-align: center;
-      padding: 50px;
-      background: #f8f8f8;
     }
-    h1 {
-      color: #0066cc;
+    header h1 {
+      font-weight: 700;
     }
-    p {
-      color: #444;
+    nav {
+      margin-top: 0.5rem;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      color: #007acc;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #007acc;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+    .intro p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+    .products {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .product-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+      flex: 1 1 calc(33% - 1rem);
+      padding: 1rem;
+      min-width: 200px;
+      text-align: center;
+    }
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+    .product-card h3 {
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+      color: #005a99;
+    }
+    .contact {
+      background: #007acc;
+      color: white;
+      padding: 2rem 1rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .contact p {
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #f0f0f0;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 700px) {
+      .products {
+        flex-direction: column;
+      }
+      .product-card {
+        flex: 1 1 100%;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>歡迎來到佑康官網</h1>
-  <p>這是一個用來測試 GitHub Pages 的簡易網站。</p>
+  <header>
+    <h1>佑康</h1>
+    <nav>
+      <a href="#intro">關於我們</a>
+      <a href="#products">產品介紹</a>
+      <a href="#contact">聯絡我們</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="intro" class="intro">
+      <h2>關於佑康</h2>
+      <p>佑康致力於提供優質健康產品，讓每一位顧客都能享受健康與活力的生活。我們的使命是用心研發，嚴選原料，給您最安心的選擇。</p>
+    </section>
+
+    <section id="products">
+      <h2>產品介紹</h2>
+      <div class="products">
+        <div class="product-card">
+          <img src="https://via.placeholder.com/300x200?text=產品1" alt="產品1" />
+          <h3>健康膠囊</h3>
+          <p>天然成分，幫助提升免疫力與身體機能。</p>
+        </div>
+        <div class="product-card">
+          <img src="https://via.placeholder.com/300x200?text=產品2" alt="產品2" />
+          <h3>維他命飲料</h3>
+          <p>補充每日所需維他命，維持精神飽滿。</p>
+        </div>
+        <div class="product-card">
+          <img src="https://via.placeholder.com/300x200?text=產品3" alt="產品3" />
+          <h3>有機草本茶</h3>
+          <p>天然草本萃取，促進消化與舒緩壓力。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>聯絡我們</h2>
+      <p>電話：02-1234-5678</p>
+      <p>Email：contact@yokang.com.tw</p>
+      <p>地址：台北市信義區松仁路100號</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 佑康健康有限公司 版權所有
+  </footer>
 </body>
 </html>
